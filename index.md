@@ -2,6 +2,8 @@
 
 **Privacy Policy** · [Support](/pawtask-legal/support/)
 
+**English** · [繁體中文](/pawtask-legal/zh/)
+
 **Last updated:** April 28, 2026
 
 ## 1. Introduction
@@ -40,7 +42,7 @@ These settings are stored as plaintext on our server because, on their own, they
 ### 2.4 Location Data — End-to-End Encrypted
 
 - **School and home coordinates** — When the parent picks an address on the map, the latitude and longitude are encrypted on the parent's iPhone using the child's public key (X25519 Sealed Box / NaCl) **before** being uploaded. Only the child's watch holds the matching private key and can decrypt these coordinates. **Our servers store only ciphertext and cannot read the actual coordinates.**
-- **Check-in coordinates** — When the watch performs a school or home check-in, the GPS coordinates are encrypted to a separate server-side public key (also X25519 Sealed Box) before transmission. The server uses this only to verify whether the check-in occurred at the configured school or home location, and does not retain the decrypted result.
+- **Check-in verification — performed on the watch** — School and home check-in verification happens entirely on the watch. The watch fetches the encrypted school/home coordinates from our server, decrypts them locally with its own private key, and compares them on-device to its current GPS reading. Only the resulting check-in event (timestamp and pass/fail) is sent to our server. **The raw GPS coordinates measured at check-in time never leave the watch, and our servers never decrypt location data.**
 
 ### 2.5 App Activity
 
@@ -73,7 +75,7 @@ This design follows Apple's HealthKit data-use policy, which forbids sending Hea
 | Email and User ID | Parent account authentication; staying signed in across sessions |
 | Device UUID and public key | Pair the child's watch to the parent account; route encrypted settings to the correct watch |
 | Schedule and settings | Display the day's plan on the watch; trigger pet animations and reminders |
-| Encrypted location data | Verify that check-ins happen at the configured school or home location |
+| Encrypted location data | Stored as ciphertext and relayed to the watch, which decrypts and verifies check-ins on-device |
 | App activity | Drive pet progression, parent dashboard, PvP matchmaking |
 | HealthKit (on-device only) | Compute pet XP rewards locally on the watch; only the XP delta is transmitted |
 
@@ -81,7 +83,7 @@ We do **not** use any of this data for advertising, marketing, profiling, or ana
 
 ## 5. How We Protect Data
 
-- **End-to-end encryption** — All location data (school, home, check-ins) is encrypted using NaCl Sealed Box (X25519 + XSalsa20 + Poly1305) before leaving the originating device. Server-side ciphertext cannot be read by us, by our hosting providers, or by any unauthorized party.
+- **End-to-end encryption** — School and home location data is encrypted using NaCl Sealed Box (X25519 + XSalsa20 + Poly1305) on the parent's iPhone before upload, and only the child's watch can decrypt it. Server-side ciphertext cannot be read by us, by our hosting providers, or by any unauthorized party. The raw GPS coordinates measured at check-in time stay on the watch and are never transmitted to our servers.
 - **HealthKit isolation** — Per Apple's HealthKit policy, raw handwashing and sleep data is read only by the watch app and is never sent to any remote service.
 - **Encryption in transit** — All requests between your devices and our servers use TLS 1.3.
 - **Short-lived authentication** — Parent JWTs are short-lived and refreshed via a rotating refresh-token flow. Watch tokens are revoked immediately if the parent unpairs the watch.
@@ -144,4 +146,4 @@ For questions, requests, or complaints about this privacy policy or your data, c
 
 ---
 
-*This policy is provided in English. If translated versions are made available, the English version controls in the event of any conflict.*
+*This policy is provided in English and Traditional Chinese. In the event of any conflict between the two versions, the English version controls.*
