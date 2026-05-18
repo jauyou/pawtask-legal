@@ -9,7 +9,7 @@ permalink: /support/
 
 **English** · [繁體中文](/pawtask-legal/support/zh/)
 
-**Last updated:** April 29, 2026
+**Last updated:** May 18, 2026
 
 PawTask is a parent-and-child habit-formation app. The parent uses an iPhone to set their child's school location, home location, and meal schedule; the child wears an Apple Watch (typically configured via Apple Family Setup) and earns rewards on a virtual pet by checking in to school, eating meals on time, and maintaining good handwashing and sleep habits.
 
@@ -70,11 +70,16 @@ PawTask itself does not enforce screen time. We recommend using Apple Family Set
 
 **What data does PawTask collect?**
 
-A summary: account email, a watch device ID and public key, your schedule settings, and encrypted location data. Health data (handwashing, sleep) is processed entirely on the watch and never sent to our servers. The full breakdown is in our [Privacy Policy](/pawtask-legal/).
+A summary: your parent account's email address (provided by *Sign in with Apple* the first time you authorize the app, or a private relay address if you chose one), a watch device ID and public key, your schedule settings, and encrypted location data. Health data (handwashing, sleep) is processed entirely on the watch and never sent to our servers. The full breakdown is in our [Privacy Policy](/pawtask-legal/).
 
-**How do I delete my account and my child's data?**
+**How do I delete my account or remove a child?**
 
-Email us at [dayou99.dev@gmail.com](mailto:dayou99.dev@gmail.com) from the address you used to sign in. We will permanently delete your account and all associated child data within 30 days.
+You can do this directly from the parent app — both flows are immediate and do not require contacting us.
+
+- **Remove one child:** on the Dashboard, tap the gear icon on that child's card to open their settings, scroll to the bottom, and tap **"Delete device"**. This unpairs the watch and permanently deletes that child's pet, XP, schedule, check-in history, and any custom tasks tied to them. Your parent account and any other children remain intact.
+- **Delete the entire account:** on the Dashboard, tap **"Account management"**, then **"Delete account"** and confirm. This permanently deletes your parent account, every paired watch's pet, all check-in history, custom tasks, and rewards. It cannot be undone.
+
+If you cannot access the parent app (lost device, locked out of *Sign in with Apple*), email us at [dayou99.dev@gmail.com](mailto:dayou99.dev@gmail.com) from the address tied to your account (or your Apple private relay address) and we will process the deletion within 30 days.
 
 **Can I export the data you hold for me?**
 

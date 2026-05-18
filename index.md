@@ -4,7 +4,7 @@
 
 **English** · [繁體中文](/pawtask-legal/zh/)
 
-**Last updated:** April 28, 2026
+**Last updated:** May 18, 2026
 
 ## 1. Introduction
 
@@ -21,8 +21,8 @@ This policy explains exactly what we collect, what we deliberately do not collec
 
 ### 2.1 Account Information
 
-- **Email address** — When a parent signs in using *Sign in with Apple*, Apple shares the parent's email address (or a private relay address chosen by the parent) so we can create the parent account.
-- **User ID** — We store the unique identifier Apple provides for *Sign in with Apple* so the same parent stays signed in across sessions and devices.
+- **Email address** — When a parent signs in using *Sign in with Apple*, Apple shares the parent's email address (or a private relay address chosen by the parent). We store this address alongside the parent account so we can recognize you when you contact support, deliver service-related notices (security alerts, account-deletion confirmations, material changes to this policy), and route receipts or renewal reminders if you subscribe to a paid tier in the future. We never use it for marketing without your separate, opt-in consent.
+- **User ID** — We store the unique identifier Apple provides for *Sign in with Apple* so the same parent stays signed in across sessions and devices. This ID, not the email, is the primary key for your account.
 
 ### 2.2 Child Device Information
 
@@ -72,7 +72,8 @@ This design follows Apple's HealthKit data-use policy, which forbids sending Hea
 
 | Data | Purpose |
 |---|---|
-| Email and User ID | Parent account authentication; staying signed in across sessions |
+| User ID | Parent account authentication; staying signed in across sessions |
+| Email | Recognize you when you contact support; service-related notices (security, deletion confirmations, policy changes); receipts and renewal reminders for paid tiers if you subscribe in the future |
 | Device UUID and public key | Pair the child's watch to the parent account; route encrypted settings to the correct watch |
 | Schedule and settings | Display the day's plan on the watch; trigger pet animations and reminders |
 | Encrypted location data | Stored as ciphertext and relayed to the watch, which decrypts and verifies check-ins on-device |
